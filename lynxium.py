@@ -187,12 +187,18 @@ def step_video() -> bool:
         print("Description vide.")
         return False
 
+    duration_input = input("Durée en secondes (ex: 4, 6, 8 - Entrée pour 4s) : ").strip()
+    if duration_input.isdigit() and int(duration_input) > 0:
+        duration = int(duration_input)
+    else:
+        duration = 4
+
     b64_ref = get_reference_media()
 
     payload = {
         "model": VIDEO_MODEL,
         "prompt": prompt,
-        "duration_seconds": VIDEO_DURATION,
+        "duration_seconds": duration,
         "aspect_ratio": "16:9",
     }
     if b64_ref:
