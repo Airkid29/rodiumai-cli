@@ -1,6 +1,6 @@
-# RodiumAI - Lynxium (Exercice 2 · Partie B)
+# RodiumAI CLI (Exercice 2 · Partie B)
 
-Programme interactif en ligne de commande enchaînant trois étapes (Chat, Génération d'image et Vidéo) via l'API RodiumAI sans SDK tiers.
+Programme interactif en ligne de commande enchaînant trois étapes (Chat, génération d'image et vidéo) via l'API RodiumAI sans SDK tiers.
 L'utilisateur peut naviguer librement entre les étapes pour recommencer, avancer ou revenir en arrière.
 
 ---
@@ -9,8 +9,8 @@ L'utilisateur peut naviguer librement entre les étapes pour recommencer, avance
 
 - **Formation** : Module 03 – *Utilisez les API IA avec RodiumAi* (Exercice 2 · Partie B : Script Python interactif).
 - **Instructeur du module** : Jean Pierre AÏGBEDE, CTO de RodiumAi.
-- **Auteur** : Kokou Olivier FIABI (pseudo : `lynxxoven`).
-- **Environnement de développement** : Écrit et testé sous **Linux Anduinos** (système d'exploitation basé sur Ubuntu).
+- **Auteur** : Projet personnel / script de travail.
+- **Environnement de développement** : Écrit et testé sous **Windows 11** avec **PowerShell / Git Bash**.
 
 ---
 
@@ -72,17 +72,17 @@ RODIUMAI_API_KEY=rd_sk_votre_cle_reelle
 Assurez-vous que votre environnement virtuel est bien activé, puis lancez le programme interactif :
 
 ```bash
-python lynxium.py
+python main.py
 ```
 
-*(Ou via `python main.py`)*
+*(Ou via `python rodiumai_cli.py`)*
 
 ---
 
 ## Fonctionnement et modèles utilisés
 
 1. **Étape 1 - Chat** :
-   - Modèle : `google/gemini-2.5-flash-lite` (Google Gemini, rapide et économique).
+   - Modèle : `google/gemini-3.1-flash-lite` (Google Gemini, rapide et économique).
    - Envoie la question de l'utilisateur, affiche la réponse générée ainsi que le coût réel de la requête en RODI.
    - Options de navigation : Rester sur l'étape (`r`) ou passer à la suivante (`s`).
 
